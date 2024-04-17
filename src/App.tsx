@@ -1,8 +1,16 @@
+import GradientBackdrop from './components/GradientBackdrop';
+import Header from './components/Header';
+import Intro from './components/Intro';
+import LatestProjects from './components/LatestProjects';
+
 function App() {
   return (
-    <div className="container">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <main className="space-y-8">
+      <GradientBackdrop />
+      <Header />
+      <Intro />
+      <LatestProjects />
+    </main>
   );
 }
 
