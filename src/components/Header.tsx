@@ -1,5 +1,3 @@
-import Link from './Link';
-
 export default function Header() {
   return (
     <nav className="container flex items-center justify-between py-6">
@@ -9,21 +7,6 @@ export default function Header() {
       >
         barestu.fandy@gmail.com
       </a>
-      <div>
-        <ul className="flex gap-4">
-          <li>
-            <Link href="#" isActive>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="#">Blog</Link>
-          </li>
-          <li>
-            <Link href="#">Projects</Link>
-          </li>
-        </ul>
-      </div>
     </nav>
   );
 }
