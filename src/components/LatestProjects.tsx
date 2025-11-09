@@ -1,16 +1,12 @@
 import { FaLink } from 'react-icons/fa';
 import projects from '../data/projects.json';
 import { cn } from '../utils/common';
-import Link from './Link';
 
 export default function LatestProjects() {
   return (
     <section className="container" id="projects">
       <div className="flex items-end justify-between py-6">
         <h3 className="text-xl">Latest Projects</h3>
-        <Link href="#" className="text-sm">
-          See All Projects
-        </Link>
       </div>
 
       <ul className="space-y-4">

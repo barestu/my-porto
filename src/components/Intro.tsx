@@ -1,3 +1,4 @@
+import social from '../data/social.json';
 import Link from './Link';
 
 export default function Intro() {
@@ -15,15 +16,15 @@ export default function Intro() {
 
       <ul className="flex gap-2">
         <li>
-          <Link href="#">X</Link>
+          <Link href={social.linkedin}>Linkedin</Link>
         </li>
         <li>|</li>
         <li>
-          <Link href="#">Twitter</Link>
+          <Link href={social.twitter}>X</Link>
         </li>
         <li>|</li>
         <li>
-          <Link href="#">Instagram</Link>
+          <Link href={social.instagram}>Instagram</Link>
         </li>
       </ul>
     </section>
