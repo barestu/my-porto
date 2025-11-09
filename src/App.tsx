@@ -4,18 +4,23 @@ import Experience from './components/Experience';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import LatestProjects from './components/LatestProjects';
+import GoogleTagManager from './components/GoogleTagManager';
 
 function App() {
   return (
-    <main className="pt-8">
-      <GradientBackdrop />
+    <>
+      <GoogleTagManager />
 
-      <Header />
-      <Intro />
-      <Experience />
-      <LatestProjects />
-      <Footer />
-    </main>
+      <main className="pt-8">
+        <GradientBackdrop />
+
+        <Header />
+        <Intro />
+        <Experience />
+        <LatestProjects />
+        <Footer />
+      </main>
+    </>
   );
 }
 
