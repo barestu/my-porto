@@ -3,7 +3,7 @@ import { cn } from '../utils/common';
 
 export default function Experience() {
   return (
-    <section className="container" id="experience">
+    <section className="container mb-8" id="experience">
       <div className="flex items-end justify-between py-6">
         <h3 className="text-xl">Experience</h3>
         <p className="text-sm text-neutral-400">

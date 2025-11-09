@@ -3,7 +3,7 @@ import Link from './Link';
 
 export default function Intro() {
   return (
-    <section className="container pt-8" id="home">
+    <section className="container pt-8 mb-8" id="home">
       <h1 className="text-3xl mb-6">Hello, I'm Fandy Barestu 🚀</h1>
 
       <p className="text-neutral-400 mb-4">
