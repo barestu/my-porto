@@ -4,7 +4,7 @@ import { cn } from '../utils/common';
 
 export default function LatestProjects() {
   return (
-    <div className="container">
+    <section className="container mb-8" id="projects">
       <div className="flex items-end justify-between py-6">
         <h3 className="text-xl">Latest Projects</h3>
       </div>
@@ -26,6 +26,6 @@ export default function LatestProjects() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
