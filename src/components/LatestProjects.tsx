@@ -5,7 +5,7 @@ import Link from './Link';
 
 export default function LatestProjects() {
   return (
-    <div className="container">
+    <section className="container" id="projects">
       <div className="flex items-end justify-between py-6">
         <h3 className="text-xl">Latest Projects</h3>
         <Link href="#" className="text-sm">
@@ -30,6 +30,6 @@ export default function LatestProjects() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }

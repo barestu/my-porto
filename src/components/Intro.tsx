@@ -2,7 +2,7 @@ import Link from './Link';
 
 export default function Intro() {
   return (
-    <div className="container">
+    <section className="container pt-8" id="home">
       <h1 className="text-3xl mb-6">Hello, I'm Fandy Barestu 🚀</h1>
 
       <p className="text-neutral-400 mb-4">
@@ -26,6 +26,6 @@ export default function Intro() {
           <Link href="#">Instagram</Link>
         </li>
       </ul>
-    </div>
+    </section>
   );
 }

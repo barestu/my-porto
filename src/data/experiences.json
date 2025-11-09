@@ -1,0 +1,42 @@
+[
+  {
+    "role": "Technical Delivery Manager",
+    "company": "SoftwareSeni Indonesia",
+    "period": "Feb 2022 – Present · 3 yrs 10 mos",
+    "location": "On-site · Yogyakarta, Indonesia",
+    "employmentType": "Full-time",
+    "summary": "Oversee architecture, documentation, and delivery for multi-team projects, aligning technical roadmaps with business goals while mentoring engineers."
+  },
+  {
+    "role": "Software Engineer",
+    "company": "Cashrewards",
+    "period": "Nov 2024 – Aug 2025 · 10 mos",
+    "location": "Remote · Sydney, New South Wales, Australia",
+    "employmentType": "Contract",
+    "summary": "Built SSR-ready Next.js + Strapi apps, maintained the Vite/Storybook design system, integrated Figma design tokens, and oversee Datadog monitoring."
+  },
+  {
+    "role": "Javascript Developer Lead",
+    "company": "SoftwareSeni Indonesia",
+    "period": "Sep 2020 – Feb 2022 · 1 yr 6 mos",
+    "location": "Hybrid · Yogyakarta, Indonesia",
+    "employmentType": "Full-time",
+    "summary": "Led a web/mobile squad, facilitated training and technical interviews, and shipped client apps across Next.js, Flutter, and React Native stacks."
+  },
+  {
+    "role": "Javascript Developer",
+    "company": "SoftwareSeni Indonesia",
+    "period": "Jun 2018 – Sep 2020 · 2 yrs 4 mos",
+    "location": "On-site · Yogyakarta, Indonesia",
+    "employmentType": "Full-time",
+    "summary": "Delivered performant React and Vite web apps plus React Native builds, covering planning through deployment with a focus on UX and clean code."
+  },
+  {
+    "role": "Graphic Designer",
+    "company": "PT. Global Indojaya Orion",
+    "period": "Nov 2016 – Feb 2018 · 1 yr 4 mos",
+    "location": "On-site · Tangerang, Indonesia",
+    "employmentType": "Full-time",
+    "summary": "Created social media and marketing assets in Photoshop/Illustrator, ensuring cohesive branding across digital campaigns."
+  }
+]

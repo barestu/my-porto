@@ -4,6 +4,7 @@
 
 @layer base {
   html {
+    scroll-behavior: smooth;
     @apply bg-neutral-900 text-white font-lato;
   }
 }
