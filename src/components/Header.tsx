@@ -1,6 +1,7 @@
 import { useEffect, useState, type MouseEvent } from 'react';
 import { cn } from '../utils/common';
 import Link from './Link';
+import HamburgerIcon from './icons/HamburgerIcon';
 
 const NAV_ITEMS = [
   { id: 'home', label: 'Home' },
@@ -11,6 +12,7 @@ const NAV_ITEMS = [
 export default function Header() {
   const [activeSection, setActiveSection] = useState(NAV_ITEMS[0].id);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const SCROLL_OFFSET = 88;
 
   useEffect(() => {
@@ -55,6 +57,7 @@ export default function Header() {
       window.scrollTo({ top: yPosition, behavior: 'smooth' });
     }
     setActiveSection(targetId);
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -67,6 +70,19 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
   return (
     <header
       className={cn(
@@ -76,29 +92,61 @@ export default function Header() {
           : 'backdrop-blur-0 bg-transparent border-b border-transparent'
       )}
     >
-      <nav className="container flex items-center justify-between py-5">
-        <a
-          href="mailto:barestu.fandy@gmail.com"
-          className="text-neutral-400 hover:text-neutral-200"
-        >
-          barestu.fandy@gmail.com
-        </a>
-        <div>
-          <ul className="flex gap-4">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.id}>
-                <Link
-                  href={`#${item.id}`}
-                  isActive={activeSection === item.id}
-                  onClick={(event) => handleNavClick(event, item.id)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
+      <div className="container relative">
+        <nav className="flex items-center justify-between py-5">
+          <a
+            href="mailto:barestu.fandy@gmail.com"
+            className="text-neutral-400 hover:text-neutral-200"
+          >
+            barestu.fandy@gmail.com
+          </a>
+          <div className="hidden md:block">
+            <ul className="flex gap-4">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.id}>
+                  <Link
+                    href={`#${item.id}`}
+                    isActive={activeSection === item.id}
+                    onClick={(event) => handleNavClick(event, item.id)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <button
+            type="button"
+            className="md:hidden inline-flex items-center justify-center rounded-md border border-white/20 p-2 text-neutral-200 hover:border-white/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+            onClick={toggleMenu}
+            aria-label="Toggle navigation"
+            aria-expanded={isMenuOpen}
+          >
+            <HamburgerIcon
+              isOpen={isMenuOpen}
+              className="h-6 w-6 text-current"
+            />
+          </button>
+        </nav>
+        {isMenuOpen && (
+          <div className="md:hidden absolute left-0 right-0 top-full mb-4 rounded-xl border border-neutral-800 bg-neutral-900/95 p-4 shadow-lg shadow-black/40">
+            <ul className="flex flex-col gap-3">
+              {NAV_ITEMS.map((item) => (
+                <li key={`${item.id}-mobile`}>
+                  <Link
+                    href={`#${item.id}`}
+                    isActive={activeSection === item.id}
+                    onClick={(event) => handleNavClick(event, item.id)}
+                    className="text-base"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </header>
   );
 }
