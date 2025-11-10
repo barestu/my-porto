@@ -4,6 +4,7 @@ import Experience from './components/Experience';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import LatestProjects from './components/LatestProjects';
+import FormContact from './components/FormContact';
 import GoogleTagManager from './components/GoogleTagManager';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Intro />
         <Experience />
         <LatestProjects />
+        <FormContact />
         <Footer />
       </main>
     </>
